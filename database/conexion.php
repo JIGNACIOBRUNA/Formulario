@@ -1,9 +1,11 @@
 <?php
 
-$host='localhost'; 
-$dbname='formulario';
-$user='postgres';
-$password='lucy';
+$config = include('config.php');
+
+$host = $config['host'];
+$dbname = $config['dbname'];
+$user = $config['user'];
+$password = $config['password'];
 
 $conexion=pg_connect("host=$host dbname=$dbname user=$user password=$password"); 
 
